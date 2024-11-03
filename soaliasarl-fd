@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOALIA SARL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffe8d6, #ff9a9e, #fad0c4);
+            background-size: 400% 400%;
+            animation: gradientBackground 15s ease infinite;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            background-color: #ffd700;
+            padding: 25px;
+            text-align: center;
+            color: #333;
+        }
+
+        nav {
+            background-color: #ffa500;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 15px;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 800px; /* Limiter la largeur pour une meilleure lisibilité */
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .form-container {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+        }
+
+        button {
+            background-color: #4CAF50; /* Couleur verte */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Couleur plus foncée au survol */
+        }
+
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .service-img {
+            width: 100px;
+            height: auto;
+            margin: 10px;
+            border-radius: 5px; /* Coins arrondis */
+            transition: transform 0.3s;
+        }
+
+        .service-img:hover {
+            transform: scale(1.1); /* Zoom au survol */
+        }
+    </style>
+</head>
+<body>
+
+<header class="animate__animated animate__fadeInDown">
+    <h1>SOALIA SARL</h1>
+    <p>Esokaka Fort-Dauphin, en face de MADSTEEL</p>
+</header>
+
+<nav class="animate__animated animate__fadeInDown">
+    <a href="#accueil">Accueil</a>
+    <a href="#apropos">À propos</a>
+    <a href="#demande-info">Pour plus d'information</a>
+    <a href="#contact">Contact</a>
+    <a href="#environnement">Environnement</a>
+</nav>
+
+<div class="container" id="accueil">
+    <h2>Bienvenue sur notre site !</h2>
+    <p>Recherche : <input type="text" placeholder="Entrez votre recherche..."></p>
+</div>
+
+<div class="container" id="apropos">
+    <h2>À propos de SOALIA SARL</h2>
+    <p>SOALIA SARL est une entreprise de construction basée à Fort-Dauphin, spécialisée dans la fabrication de pavés autobloquants écologiques issus de la valorisation des déchets plastiques.</p>
+</div>
+
+<div class="container">
+    <h2>Nos Services</h2>
+    <p>Nous offrons des services dans les domaines de la construction, de la maintenance et de l'électricité.</p>
+    <img src="https://via.placeholder.com/100.png?text=Construction" alt="Construction" class="service-img" />
+    <img src="https://via.placeholder.com/100.png?text=Autobloquant" alt="Autobloquant" class="service-img" />
+    <img src="https://via.placeholder.com/100.png?text=Pavé+Écologique" alt="Pavé Écologique" class="service-img" />
+    <img src="https://via.placeholder.com/100.png?text=Maintenance" alt="Maintenance" class="service-img" />
+    <img src="https://via.placeholder.com/100.png?text=Électricité" alt="Électricité" class="service-img" />
+</div>
+
+<div class="container form-container" id="demande-info">
+    <h2>Pour plus d'information</h2>
+    <form>
+        <div class="form-group">
+            <label for="type-client">Type de Client :</label>
+            <select id="type-client" name="type-client">
+                <option value="particulier">Particulier</option>
+                <option value="projet">Projet / ONG</option>
+                <option value="entreprise">Entreprise</option>
+            </select>
+        </div>
+
+        <!-- Champs pour Particulier -->
+        <div class="form-group particulier" style="display:none;">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom">
+        </div>
+        <div class="form-group particulier" style="display:none;">
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom">
+        </div>
+        <div class="form-group particulier" style="display:none;">
+            <label for="adresse">Adresse :</label>
+            <input type="text" id="adresse" name="adresse">
+        </div>
+        <div class="form-group particulier" style="display:none;">
+            <label for="contact">Contact :</label>
+            <input type="text" id="contact" name="contact">
+        </div>
+        <div class="form-group particulier" style="display:none;">
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="form-group particulier" style="display:none;">
+            <label for="objet">Objet de la demande (facultatif) :</label>
+            <input type="text" id="objet" name="objet">
+        </div>
+
+        <!-- Champs pour Projet / ONG et Entreprise -->
+        <div class="form-group entreprise-projet" style="display:none;">
+            <label for="nif">NIF :</label>
+            <input type="text" id="nif" name="nif">
+        </div>
+        <div class="form-group entreprise-projet" style="display:none;">
+            <label for="stat">STAT :</label>
+            <input type="text" id="stat" name="stat">
+        </div>
+        <div class="form-group entreprise-projet" style="display:none;">
+            <label for="rcs">RCS :</label>
+            <input type="text" id="rcs" name="rcs">
+        </div>
+        <div class="form-group entreprise-projet" style="display:none;">
+            <label for="adresse-entreprise">Adresse :</label>
+            <input type="text" id="adresse-entreprise" name="adresse-entreprise">
+        </div>
+        <div class="form-group entreprise-projet" style="display:none;">
+            <label for="nom-entreprise">Nom de l'Entreprise :</label>
+            <input type="text" id="nom-entreprise" name="nom-entreprise">
+        </div>
+        <div class="form-group entreprise-projet" style="display:none;">
+            <label for="raison-sociale">Raison Sociale :</label>
+            <input type="text" id="raison-sociale" name="raison-sociale">
+        </div>
+        <div class="form-group entreprise-projet" style="display:none;">
+            <label for="objet-demande">Objet de la demande (facultatif) :</label>
+            <input type="text" id="objet-demande" name="objet-demande">
+        </div>
+        
+        <!-- Type de Demande -->
+        <div class="form-group">
+            <label>Type de Demande :</label><br>
+            <input type="radio" id="devis" name="type-demande" value="devis">
+            <label for="devis">Devis</label><br>
+            <input type="radio" id="commande" name="type-demande" value="commande">
+            <label for="commande">Commande</label><br>
+            <input type="radio" id="autre" name="type-demande" value="autre">
+            <label for="autre">Autre</label>
+        </div>
+
+        <button type="submit">Envoyer</button>
+    </form>
+</div>
+
+<div class="container" id="environnement">
+    <h2>Notre Engagement Environnemental</h2>
+    <p>Chez SOALIA SARL, nous nous engageons à contribuer activement à la protection de l'environnement en transformant les déchets plastiques en pavés autobloquants durables et écologiques.</p>
+    <p>Notre mission est de réduire l'empreinte écologique de la construction tout en offrant des produits de qualité qui répondent aux besoins des communautés et des infrastructures locales.</p>
+    <p><strong>Pourquoi investir dans SOALIA SARL ?</strong></p>
+    <ul>
+        <li><strong>Impact Environnemental :</strong> En valorisant les déchets plastiques, nous réduisons la pollution plastique et contribuons à un avenir plus propre.</li>
+        <li><strong>Impact Social :</strong> Nos projets créent des emplois locaux et favorisent une prise de conscience écologique au sein des communautés.</li>
+        <li><strong>Opportunités de croissance :</strong> Avec un marché croissant de la construction durable, SOALIA SARL offre des perspectives de développement attractives pour les investisseurs.</li>
+    </ul>
+    <p>Rejoignez-nous dans notre démarche pour un développement durable en investissant dans un avenir plus vert et plus responsable.</p>
+</div>
+
+<div class="container" id="contact">
+    <h2>Contact</h2>
+    <p><strong>Téléphone :</strong> +261 34 256 8457 / +261 34 682 9661 / +261 38 747 4398</p>
+    <p><strong>Adresse e-mail :</strong> <a href="mailto:soaliasarlfd@gmail.com">soaliasarlfd@gmail.com</a></p>
+</div>
+
+<footer>
+    <p>Nous vous remercions de votre visite !</p>
+    <p>&copy; 2024 SOALIA SARL. Tous droits réservés.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+<script>
+    const qr = new QRious({
+        element: document.getElementById('qr-code'),
+        value: 'https://www.soaliasarl-fd.com',
+        size: 200
+    });
+
+    document.getElementById('type-client').addEventListener('change', function () {
+        const isParticulier = this.value === 'particulier';
+        const isEntrepriseProjet = this.value === 'entreprise' || this.value === 'projet';
+        
+        document.querySelectorAll('.particulier').forEach(el => el.style.display = isParticulier ? 'block' : 'none');
+        document.querySelectorAll('.entreprise-projet').forEach(el => el.style.display = isEntrepriseProjet ? 'block' : 'none');
+    });
+</script>
+
+</body>
+</html>
